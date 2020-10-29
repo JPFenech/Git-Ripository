@@ -13,17 +13,17 @@
                         <div id="app">
                                       
                         <h1 v-text='sitename' class="title"> </h1>
-                        
-                      
+                                              
                           <main> 
                             
-                            <div class="container"></div><button v-on:click='showCheckout'>{{cartItemCount}} 
+                            <div class="container">
+                                <button v-on:click='showCheckout'>{{cartItemCount}} 
                                 <span class="fa fa-cart-plus"> </span>Checkout </button>
                                 <div v-if = 'showProduct'></div>
                           <figure>
                               <img v-bind:src="product.image" class="image">
                           </figure>
-                 <div class="jumbotron"></div>
+                 <div class="jumbotron">
                           <h2 v-text= "product.subject" class=info></h2> 
                           <h3 v-html= "product.location" class=info></h3>
                           <div class="price">
