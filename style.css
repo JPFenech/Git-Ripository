@@ -1,0 +1,60 @@
+
+        .jumbotron{
+                background-color:#5e5db1;
+                color:rgb(255, 255, 255);
+                border-radius: 25px;
+                
+        }
+        .tab-content {
+                border-left: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                padding: 10px;
+        }
+
+        .title{
+                display: flex;
+                              
+                padding: 1rem 1rem;
+                border-bottom: 1px solid #1f67ae;
+    
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                    }
+
+        .image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            width: 50%;
+        }
+
+        .price {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .info {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .container {
+              width: 100%;
+              padding-right: 15px;
+              padding-left: 15px;
+              margin-right: auto;
+              margin-left: auto;
+        }
+        .maths {
+            width:100%;
+            height:100%;
+            color:#5e5db1;
+            background:url(images/background.jpg) repeat;
+}
