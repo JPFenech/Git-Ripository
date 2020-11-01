@@ -8,35 +8,39 @@
      </head>
             <body>
 
-                    
+                    <!--- used maths div for styling-->
                         <div class="maths">  
                         <div id="app">
                                       
                         <h1 v-text='sitename' class="title"> </h1>
                                               
                           <main> 
-                            
+                            <!--- container div used for styling-->
                             <div class="container">
+                                <!--- used v-on feature as requested, this will show the checkout button with icon-->
                                 <button v-on:click='showCheckout'>{{cartItemCount}} 
                                 <span class="fa fa-cart-plus"> </span>Checkout </button>
                                 <figure>
                               <img v-bind:src="product.image" class="image">
                           </figure>
+                          <!--- used jumbotron (bootstrap feature)for styling-->
                  <div class="jumbotron">
                           <h2 v-text= "product.subject" class=info></h2> 
                           <h3 v-html= "product.location" class=info></h3>
                           <div class="price">
                           <h5> Price {{ product.price }} </h5>
-                       
+                       <!--- will be able to click on add button as long as there are spaces available, when stock becomes 0 message will display--->
                           <button v-on:click='addToCart' v-if='canAddToCart'> Add to Cart</button>
                                 <button disabled = 'disabled' v-else> Add to Cart</button>  
                                 <span class="inventory-message"
                                 v-if="product.availableInventory - cartItemCount === 0"> No More Spaces Available!
                               </span>
+                              <!--- as soon as items available are less than 4 th is warning message will appear to notify user of low remaining spaces-->
                               <span class="inventory-message"
                                 v-else-if="product.availableInventory - cartItemCount < 4">
                                 Only {{product.availableInventory - cartItemCount}} left!
                               </span>
+                              <!--- as long as spaces availbale this will show---> 
                               <span class="inventory-message"
                                 v-else> Space Still Available!
                               </span>
