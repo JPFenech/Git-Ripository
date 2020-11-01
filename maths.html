@@ -19,7 +19,7 @@
                             <div class="container">
                                 <button v-on:click='showCheckout'>{{cartItemCount}} 
                                 <span class="fa fa-cart-plus"> </span>Checkout </button>
-                                <div v-if = 'showProduct'></div>
+                                <!----<div v-if = 'showProduct'></div>--->
                           <figure>
                               <img v-bind:src="product.image" class="image">
                           </figure>
@@ -28,8 +28,19 @@
                           <h3 v-html= "product.location" class=info></h3>
                           <div class="price">
                           <h5> Price {{ product.price }} </h5>
+                       
                           <button v-on:click='addToCart' v-if='canAddToCart'> Add to Cart</button>
                                 <button disabled = 'disabled' v-else> Add to Cart</button>  
+                                <span class="inventory-message"
+                                v-if="product.availableInventory - cartItemCount === 0"> No More Spaces Available!
+                              </span>
+                              <span class="inventory-message"
+                                v-else-if="product.availableInventory - cartItemCount < 4">
+                                Only {{product.availableInventory - cartItemCount}} left!
+                              </span>
+                              <span class="inventory-message"
+                                v-else> Space Still Available!
+                              </span>
                           
                              
                         </main>
@@ -51,7 +62,7 @@
                                 location: "Mosta",
                                 price: "€8",
                                 image: "images/maths.jpg",
-                                availableInventory: 5
+                                availableInventory: 10
                             },
                             cart: [] //creation of an empty array called cart
             },
