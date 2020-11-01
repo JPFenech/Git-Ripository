@@ -19,8 +19,7 @@
                             <div class="container">
                                 <button v-on:click='showCheckout'>{{cartItemCount}} 
                                 <span class="fa fa-cart-plus"> </span>Checkout </button>
-                                <!----<div v-if = 'showProduct'></div>--->
-                          <figure>
+                                <figure>
                               <img v-bind:src="product.image" class="image">
                           </figure>
                  <div class="jumbotron">
@@ -62,7 +61,7 @@
                                 location: "Mosta",
                                 price: "€8",
                                 image: "images/maths.jpg",
-                                availableInventory: 10
+                                availableInventory: 8
                             },
                             cart: [] //creation of an empty array called cart
             },
